@@ -1,8 +1,28 @@
 <header class="header">
-  <img
-    class="header--image"
-    [src]="addImage( path )| backgroundImage"
-    alt=""
-  >
+  <img class="header--image" [src]="addElements( path )| backgroundImage" alt="">
   <shared-navbar-menu class="header--content"></shared-navbar-menu>
+  <div class="container header--content--title">
+    <h1 class="header--title">Add title</h1>
+  </div>
 </header>
+<div class="container main p-5">
+  <router-outlet class="main--content"></router-outlet>
+
+</div>
+<footer class="footer">
+  <div class="container d-flex align-items-center justify-content-between footer--content p-5">
+    <div class="footer--icons">
+      <a class="text-light footer--icons-icon" href="https://www.linkedin.com/in/whanderley-fonseca-picado-696247143/" target="_blank">
+        <i class="bi bi-linkedin text"></i>
+      </a>
+      <a class="text-light footer--icons-icon" href="https://github.com/whan05" target="_blank">
+        <i class="bi bi-github"></i>
+      </a>
+    </div>
+    <shared-navbar-menu></shared-navbar-menu>
+  </div>
+  <hr class="text-light">
+  <div class="copyright p-3 d-flex justify-content-center align-items-center text-light">
+    <h5>Created by Whan. All rights reserved. 2024</h5>
+  </div>
+</footer>

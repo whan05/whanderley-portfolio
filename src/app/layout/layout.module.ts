@@ -17,6 +17,9 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     SharedModule,
     RouterModule
+  ],
+  exports: [
+    BackgroundImagePipe
   ]
 })
 export class LayoutModule { }

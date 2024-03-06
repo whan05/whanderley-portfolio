@@ -8,24 +8,45 @@ import { Router } from '@angular/router';
 })
 export class LayoutPageComponent {
 
-  constructor( private router: Router) {}
-  public path = this.router.url
+  constructor(private router: Router) { }
+  public path = this.router.url;
+  public title: string = '';
 
 
-  addImage( image:string ){
-    console.log(this.path)
+  addElements(image: string) {
     if (this.path === '/home') {
-      image =  this.router.url.slice(1, this.router.url.length)
+      image = this.router.url.slice(1, this.router.url.length)
 
       return image
     }
     if (this.path === '/about-me') {
-      // image =  this.router.url.slice(1, this.router.url.length)
+      image = this.router.url.slice(1, this.router.url.length)
       return image
     }
 
 
     return '';
+  }
+
+  addTitle(title: string) {
+
+    if (this.path === '/home') {
+
+      title = this.title = "I'm a Web Developer"
+      console.log(title)
+
+      return title
+    }
+    if (this.path === '/about') {
+
+      title = this.title = "Join me my profesional experience"
+      console.log(title)
+
+      return title
+    }
+
+    return '';
+
   }
 
 

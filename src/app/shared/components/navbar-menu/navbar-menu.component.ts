@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class NavbarMenuComponent {
 
   public menuItems = [
+    { title: 'Home', route: '/home'},
     { title: 'About Me', route: '/about-me'},
     { title: 'Work Experience', route: '/work-experience'},
     { title: 'My Projects', route: '/my-projects'},

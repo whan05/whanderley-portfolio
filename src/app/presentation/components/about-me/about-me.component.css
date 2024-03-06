@@ -1,0 +1,45 @@
+.about--me {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .about--me-title{
+    position: relative;
+} */
+
+.about--me-quad{
+    width: 25px;
+    height: 40px;
+}
+
+.about--be-title-text{
+    margin-top: -40px;
+    margin-left: 5px;
+}
+
+.about--me-text{
+    padding-left: 20px;
+}
+
+
+.about--me-img{
+    display: flex;
+    justify-content: center;
+}
+
+.img--profile{
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.about--me-btn-download{
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    font-weight: bold;
+    width: 40%;
+}

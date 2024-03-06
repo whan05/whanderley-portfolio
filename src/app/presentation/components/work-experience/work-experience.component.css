@@ -1,0 +1,20 @@
+.work--experience-exp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.work--experience-exp-title{
+    width: 30%;
+}
+
+
+.work--experience-exp-text{
+    width: 50%;
+}
+
+.work--experience-exp:nth-child(odd){
+    flex-direction:row-reverse;
+}
+

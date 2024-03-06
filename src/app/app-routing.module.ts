@@ -10,7 +10,7 @@ import { LayoutPageComponent } from './layout/pages/layout-page/layout-page.comp
 const routes: Routes = [
   {
     path: '',
-    component: LayoutPageComponent,
+    component : LayoutPageComponent,
     children: [
       { path: 'home',  component: HomePageComponent },
       { path: 'about-me',  component:  AboutPageComponent},
@@ -18,8 +18,13 @@ const routes: Routes = [
       { path: 'my-projects',  component: ProjectsPageComponent },
       { path: 'contact',  component: ContactPageComponent },
       { path: '**',  redirectTo:'home' },
-    ]
-  }
+    ],
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
