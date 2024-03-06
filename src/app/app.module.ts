@@ -9,10 +9,11 @@ import { WorkExperienceModule } from './work-experience/work-experience.module';
 import { MyProjectsModule } from './my-projects/my-projects.module';
 import { ContactMeModule } from './contact-me/contact-me.module';
 import { LayoutModule } from './layout/layout.module';
+import { ImagePipe } from './pipes/images/generate-image.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,7 @@ import { LayoutModule } from './layout/layout.module';
     WorkExperienceModule,
     MyProjectsModule,
     ContactMeModule,
-    LayoutModule
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

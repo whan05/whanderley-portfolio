@@ -5,12 +5,16 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { MySkillsComponent } from './components/my-skills/my-skills.component';
+import { ImagePipe } from '../pipes/images/generate-image.pipe';
 
 @NgModule({
   declarations: [
     HomePageComponent,
     AboutMeComponent,
     WorkExperienceComponent,
+    MySkillsComponent,
+    ImagePipe
   ],
   exports:[
     HomePageComponent
@@ -18,6 +22,7 @@ import { WorkExperienceComponent } from './components/work-experience/work-exper
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule,  ]
+    RouterModule,
+  ]
 })
 export class PresentationModule { }
