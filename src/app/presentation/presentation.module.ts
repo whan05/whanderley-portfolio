@@ -20,6 +20,7 @@ import { MySkillsComponent } from './components/my-skills/my-skills.component';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule,  ]
+    RouterModule,
+  ]
 })
 export class PresentationModule { }
