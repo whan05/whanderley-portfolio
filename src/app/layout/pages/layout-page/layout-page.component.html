@@ -1,11 +1,11 @@
 <header class="header">
   <img class="header--image" [src]="addElements( path )| backgroundImage" alt="">
-  <shared-navbar-menu class="header--content"></shared-navbar-menu>
+  <shared-navbar-menu class="header--content" (changeTitleEvent)="changeRoute($event)" ></shared-navbar-menu>
   <div class="container header--content--title">
-    <h1 class="header--title">Add title</h1>
+    <h1 class="header--title">{{title}}</h1>
   </div>
 </header>
-<div class="container main p-5">
+<div class="main py-5">
   <router-outlet class="main--content"></router-outlet>
 
 </div>

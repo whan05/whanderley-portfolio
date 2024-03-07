@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './layout-page.component.html',
   styleUrls: ['./layout-page.component.css']
 })
-export class LayoutPageComponent {
+export class LayoutPageComponent implements OnInit {
 
   constructor(private router: Router) { }
   public path = this.router.url;
@@ -19,6 +19,7 @@ export class LayoutPageComponent {
 
       return image
     }
+
     if (this.path === '/about-me') {
       image = this.router.url.slice(1, this.router.url.length)
       return image
@@ -28,27 +29,36 @@ export class LayoutPageComponent {
     return '';
   }
 
-  addTitle(title: string) {
-
-    if (this.path === '/home') {
-
-      title = this.title = "I'm a Web Developer"
-      console.log(title)
-
-      return title
-    }
-    if (this.path === '/about') {
-
-      title = this.title = "Join me my profesional experience"
-      console.log(title)
-
-      return title
-    }
-
-    return '';
-
+  ngOnInit(): void {
+    this.addTitle(this.path)
   }
 
 
+  changeRoute(event: string){
 
+    this.addTitle(event)
+
+  }
+
+  addTitle(route: string) {
+
+    switch (route) {
+      case '/home':
+        this.title = 'Im Web Developer'
+        break;
+
+      case '/about-me':
+        this.title = 'Joinme'
+        break;
+
+
+      default:
+        break;
+    }
+
+    console.log(event)
+    console.log(this.router.url)
+    return event;
+
+  }
 }

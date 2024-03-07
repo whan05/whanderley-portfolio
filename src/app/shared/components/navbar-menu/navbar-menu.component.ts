@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'shared-navbar-menu',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar-menu.component.css']
 })
 export class NavbarMenuComponent {
+
+  constructor( 
+    private router: Router
+  ){}
+
+  @Output() changeTitleEvent = new EventEmitter()
 
   public menuItems = [
     { title: 'Home', route: '/home'},
@@ -15,5 +22,12 @@ export class NavbarMenuComponent {
     { title: 'Les´t connect', route: '/my-contact'},
   ]
 
+  public text: string = '';
 
+
+  changeTitle(value: string){
+    
+    this.changeTitleEvent.emit(value)
+
+  }
 }
